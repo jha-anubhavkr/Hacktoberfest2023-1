@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+
+void printarray(int arr[],int n){
+    int i;
+    for(i=0;i<n;i++){
+        cout<<arr[i]<<' ';
+    }
+}
+
+
+int main(){
+    int a[]={1,5,45,56,98,87,67,56,78,98,7,67};
+    int size=sizeof(a)/sizeof(a[0]);
+    int i;
+    int j;
+    for(i=0;i<size-1;i++){
+        for(j=0;j<size-i-1;j++){
+            if(a[j]>=a[j+1]){
+                swap(a[j],a[j+1]);                
+            }
+        }
+    } 
+    cout<<"Sorted array"<<endl;
+    int k;
+    cout<<size<<endl;
+    for(k=0;k<size;k++){
+        cout<<a[k]<<' ';
+    }
+    //printarray(a,size); 
+    cout<<endl; 
+    
+
+}
